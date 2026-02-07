@@ -45,11 +45,11 @@ const display = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "BienMind - Votre bien-être mental au quotidien",
+    default: "BienMind - Éditeur de SaaS pour le care et le bien-être",
     template: "%s | BienMind",
   },
   description:
-    "BienMind vous accompagne vers un meilleur équilibre mental. Découvrez nos services de coaching, méditation et accompagnement personnalisé.",
+    "BienMind conçoit et lance des produits SaaS innovants pour le secteur du care et du bien-être. Oliceo, SonoCrea et bien d'autres projets à venir.",
 };
 
 export default function RootLayout({

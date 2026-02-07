@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navigation = [
-  { name: "Accueil", href: "/" },
-  { name: "Services", href: "/services" },
+  { name: "Produits", href: "/services" },
   { name: "À propos", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
@@ -19,7 +18,7 @@ export default function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-primary-600 to-primary-400 flex items-center justify-center">
               <span className="text-white font-bold text-lg">B</span>
             </div>
             <span className="font-display text-xl font-bold text-gray-900">
@@ -42,7 +41,7 @@ export default function Header() {
               href="/contact"
               className="rounded-full bg-primary-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 transition-colors"
             >
-              Prendre rendez-vous
+              Lancer votre projet
             </Link>
           </div>
 
@@ -84,7 +83,7 @@ export default function Header() {
                 className="mt-2 rounded-full bg-primary-600 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-700 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Prendre rendez-vous
+                Lancer votre projet
               </Link>
             </div>
           </div>

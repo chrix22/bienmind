@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez BienMind pour prendre rendez-vous ou poser vos questions. Première consultation gratuite.",
+    "Contactez BienMind pour discuter de votre projet SaaS dans le care et le bien-être.",
 };
 
 export default function ContactPage() {
@@ -15,14 +15,14 @@ export default function ContactPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-gray-900">
-              Prenez contact{" "}
+              Parlons de votre{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600">
-                avec nous
+                projet
               </span>
             </h1>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-              Une question, une envie de commencer ? N&apos;hésitez pas à nous écrire.
-              La première consultation est offerte.
+              Une idée de SaaS pour le care ou le bien-être ? Décrivez-nous votre projet,
+              nous vous répondons sous 24h.
             </p>
           </div>
         </div>
@@ -74,51 +74,56 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Téléphone (optionnel)
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
-                    placeholder="06 12 34 56 78"
-                  />
-                </div>
-                <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service souhaité
+                    Type de projet
                   </label>
                   <select
                     id="service"
                     name="service"
                     className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
                   >
-                    <option value="">Sélectionnez un service</option>
-                    <option value="coaching">Coaching individuel</option>
-                    <option value="meditation">Méditation guidée</option>
-                    <option value="atelier">Ateliers collectifs</option>
-                    <option value="programme">Programmes en ligne</option>
+                    <option value="">Sélectionnez un type</option>
+                    <option value="mvp">Développement MVP</option>
+                    <option value="ia">Intégration IA</option>
+                    <option value="automation">Automatisation SaaS</option>
+                    <option value="prototype">Prototypage rapide</option>
                     <option value="autre">Autre</option>
                   </select>
                 </div>
                 <div>
+                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                    Budget estimé (optionnel)
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
+                  >
+                    <option value="">Sélectionnez une fourchette</option>
+                    <option value="5k">Moins de 5 000 &euro;</option>
+                    <option value="10k">5 000 - 10 000 &euro;</option>
+                    <option value="25k">10 000 - 25 000 &euro;</option>
+                    <option value="50k">25 000 - 50 000 &euro;</option>
+                    <option value="50k+">Plus de 50 000 &euro;</option>
+                  </select>
+                </div>
+                <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    Décrivez votre projet
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
                     className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all resize-none"
-                    placeholder="Décrivez-nous vos besoins..."
+                    placeholder="Parlez-nous de votre idée, votre cible, vos objectifs..."
                   />
                 </div>
                 <button
                   type="submit"
                   className="w-full sm:w-auto rounded-full bg-primary-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/25 hover:bg-primary-700 transition-all"
                 >
-                  Envoyer le message
+                  Envoyer ma demande
                 </button>
               </form>
             </div>
@@ -126,7 +131,7 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-4">Informations de contact</h3>
+                <h3 className="font-semibold text-gray-900 mb-4">Nous contacter</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <svg className="h-5 w-5 text-primary-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
@@ -134,7 +139,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <div className="text-sm font-medium text-gray-900">Email</div>
-                      <div className="text-sm text-gray-600">contact@bienmind.com</div>
+                      <div className="text-sm text-gray-600">hello@bienmind.com</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -143,7 +148,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <div className="text-sm font-medium text-gray-900">Téléphone</div>
-                      <div className="text-sm text-gray-600">01 23 45 67 89</div>
+                      <div className="text-sm text-gray-600">+33 (0)1 85 09 80 06</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -152,42 +157,58 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                     <div>
-                      <div className="text-sm font-medium text-gray-900">Adresse</div>
-                      <div className="text-sm text-gray-600">
-                        12 rue du Bien-Être<br />
-                        75011 Paris
-                      </div>
+                      <div className="text-sm font-medium text-gray-900">Localisation</div>
+                      <div className="text-sm text-gray-600">Paris, France</div>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-4">Horaires</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Lundi - Vendredi</span>
-                    <span className="text-gray-900 font-medium">9h - 19h</span>
+                <h3 className="font-semibold text-gray-900 mb-4">Réponse rapide</h3>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <svg className="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Réponse sous 24h
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Samedi</span>
-                    <span className="text-gray-900 font-medium">9h - 13h</span>
+                  <div className="flex items-center gap-2">
+                    <svg className="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Devis gratuit et sans engagement
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Dimanche</span>
-                    <span className="text-gray-900 font-medium">Fermé</span>
+                  <div className="flex items-center gap-2">
+                    <svg className="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    Appel discovery offert
                   </div>
                 </div>
               </div>
 
               <div className="bg-primary-50 rounded-2xl p-6">
                 <h3 className="font-semibold text-primary-900 mb-2">
-                  Première consultation offerte
+                  Nos produits en référence
                 </h3>
-                <p className="text-sm text-primary-700 leading-relaxed">
-                  Profitez d&apos;un entretien découverte gratuit de 30 minutes pour
-                  définir ensemble vos objectifs.
+                <p className="text-sm text-primary-700 leading-relaxed mb-3">
+                  Découvrez ce que nous avons déjà construit :
                 </p>
+                <div className="space-y-2">
+                  <a href="https://oliceo.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-600 font-medium hover:underline flex items-center gap-1">
+                    oliceo.com
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                  </a>
+                  <a href="https://sonocrea.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-600 font-medium hover:underline flex items-center gap-1">
+                    sonocrea.com
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
