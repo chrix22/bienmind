@@ -14,6 +14,8 @@ export interface BlogPost {
   author: string;
   category: string;
   coverColor?: string;
+  image?: string;
+  readingTime?: string;
   content?: string;
 }
 
@@ -31,6 +33,9 @@ export function getAllPosts(): BlogPost[] {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
 
+      const wordCount = fileContents.split(/\s+/).length;
+      const readingTime = `${Math.max(1, Math.ceil(wordCount / 200))} min`;
+
       return {
         slug,
         title: data.title || slug,
@@ -39,6 +44,8 @@ export function getAllPosts(): BlogPost[] {
         author: data.author || "BienMind",
         category: data.category || "Bien-être",
         coverColor: data.coverColor || "from-primary-200 to-accent-200",
+        image: data.image || undefined,
+        readingTime,
       };
     });
 
@@ -58,6 +65,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
+  const wordCount = content.split(/\s+/).length;
+  const readingTime = `${Math.max(1, Math.ceil(wordCount / 200))} min`;
+
   return {
     slug,
     title: data.title || slug,
@@ -66,6 +76,8 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     author: data.author || "BienMind",
     category: data.category || "Bien-être",
     coverColor: data.coverColor || "from-primary-200 to-accent-200",
+    image: data.image || undefined,
+    readingTime,
     content: contentHtml,
   };
 }

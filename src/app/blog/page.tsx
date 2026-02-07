@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
+import Disclaimer from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Conseils, réflexions et ressources pour cultiver votre bien-être mental au quotidien.",
+    "Articles sur l'IA, le bien-être digital, la nutrition, l'art-thérapie et les pratiques de care non médical. Par BienMind, éditeur de SaaS wellness.",
 };
 
 export default function BlogPage() {
@@ -15,7 +17,7 @@ export default function BlogPage() {
     <>
       {/* Hero */}
       <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent-50 via-white to-primary-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-gray-900">
@@ -25,58 +27,75 @@ export default function BlogPage() {
               </span>
             </h1>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-              Conseils pratiques, réflexions et ressources pour prendre soin de votre
-              santé mentale au quotidien.
+              IA, édition de contenus, bien-être digital, nutrition, art-thérapie et pratiques
+              de care non médical. Nos réflexions et guides pour les acteurs du wellness.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Disclaimer */}
+      <section className="pb-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Disclaimer />
+        </div>
+      </section>
+
       {/* Posts Grid */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">Aucun article pour le moment. Revenez bientôt !</p>
+              <p className="text-gray-500 text-lg">Aucun article pour le moment.</p>
             </div>
           ) : (
             <>
               {/* Featured Post */}
-              {posts.length > 0 && (
-                <div className="mb-16">
-                  <Link href={`/blog/${posts[0].slug}`} className="group block">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                      <div className={`aspect-[16/10] rounded-3xl bg-gradient-to-br ${posts[0].coverColor} flex items-center justify-center`}>
-                        <span className="text-6xl font-display font-bold text-white/30">
-                          {posts[0].title.charAt(0)}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-3 mb-4">
-                          <span className="inline-block rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700">
-                            {posts[0].category}
+              <div className="mb-16">
+                <Link href={`/blog/${posts[0].slug}`} className="group block">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div className="relative aspect-[16/10] rounded-3xl overflow-hidden">
+                      {posts[0].image ? (
+                        <Image
+                          src={posts[0].image}
+                          alt={posts[0].title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className={`w-full h-full bg-gradient-to-br ${posts[0].coverColor} flex items-center justify-center`}>
+                          <span className="text-6xl font-display font-bold text-white/30">
+                            {posts[0].title.charAt(0)}
                           </span>
-                          <span className="text-sm text-gray-500">{formatDate(posts[0].date)}</span>
                         </div>
-                        <h2 className="font-display text-3xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                          {posts[0].title}
-                        </h2>
-                        <p className="mt-4 text-gray-600 leading-relaxed">
-                          {posts[0].excerpt}
-                        </p>
-                        <div className="mt-6 flex items-center gap-3">
-                          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center">
-                            <span className="text-white text-xs font-semibold">
-                              {posts[0].author.charAt(0)}
-                            </span>
-                          </div>
-                          <span className="text-sm text-gray-600">{posts[0].author}</span>
-                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="inline-block rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700">
+                          {posts[0].category}
+                        </span>
+                        <span className="text-sm text-gray-500">{formatDate(posts[0].date)}</span>
+                        {posts[0].readingTime && (
+                          <span className="text-sm text-gray-400">{posts[0].readingTime} de lecture</span>
+                        )}
+                      </div>
+                      <h2 className="font-display text-3xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                        {posts[0].title}
+                      </h2>
+                      <p className="mt-4 text-gray-600 leading-relaxed">
+                        {posts[0].excerpt}
+                      </p>
+                      <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+                        Lire l&apos;article
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
                       </div>
                     </div>
-                  </Link>
-                </div>
-              )}
+                  </div>
+                </Link>
+              </div>
 
               {/* Other Posts */}
               {posts.length > 1 && (
@@ -84,30 +103,36 @@ export default function BlogPage() {
                   {posts.slice(1).map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                       <article className="h-full flex flex-col">
-                        <div className={`aspect-[16/10] rounded-2xl bg-gradient-to-br ${post.coverColor} flex items-center justify-center mb-4`}>
-                          <span className="text-4xl font-display font-bold text-white/30">
-                            {post.title.charAt(0)}
-                          </span>
+                        <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4">
+                          {post.image ? (
+                            <Image
+                              src={post.image}
+                              alt={post.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                          ) : (
+                            <div className={`w-full h-full bg-gradient-to-br ${post.coverColor} flex items-center justify-center`}>
+                              <span className="text-4xl font-display font-bold text-white/30">
+                                {post.title.charAt(0)}
+                              </span>
+                            </div>
+                          )}
                         </div>
                         <div className="flex items-center gap-3 mb-3">
                           <span className="inline-block rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700">
                             {post.category}
                           </span>
-                          <span className="text-sm text-gray-500">{formatDate(post.date)}</span>
+                          <span className="text-xs text-gray-400">{post.readingTime}</span>
                         </div>
-                        <h3 className="font-display text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                        <h3 className="font-display text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors leading-snug">
                           {post.title}
                         </h3>
-                        <p className="mt-2 text-sm text-gray-600 leading-relaxed flex-grow">
+                        <p className="mt-2 text-sm text-gray-600 leading-relaxed flex-grow line-clamp-3">
                           {post.excerpt}
                         </p>
-                        <div className="mt-4 flex items-center gap-2">
-                          <div className="h-6 w-6 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center">
-                            <span className="text-white text-[10px] font-semibold">
-                              {post.author.charAt(0)}
-                            </span>
-                          </div>
-                          <span className="text-xs text-gray-500">{post.author}</span>
+                        <div className="mt-4 text-xs text-gray-500">
+                          {formatDate(post.date)}
                         </div>
                       </article>
                     </Link>
