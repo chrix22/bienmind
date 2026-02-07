@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg-mbe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <linearGradient id="accent-mbe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="card-mbe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-mbe)" />
+
+  <!-- Soft background circles for depth -->
+  <circle cx="200" cy="150" r="300" fill="#f43f5e" opacity="0.1" />
+  <circle cx="1000" cy="500" r="350" fill="#2563eb" opacity="0.15" />
+  <circle cx="600" cy="315" r="200" fill="#ffffff" opacity="0.05" />
+
+  <!-- Abstract video player -->
+  <rect x="80" y="160" width="420" height="260" rx="20" fill="url(#card-mbe)" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5" />
+  <rect x="80" y="160" width="420" height="20" rx="20" fill="#ffffff" opacity="0.1" />
+  <!-- Play button -->
+  <circle cx="290" cy="290" r="45" fill="#ffffff" opacity="0.2" />
+  <polygon points="275,265 275,315 315,290" fill="#ffffff" opacity="0.8" />
+  <!-- Progress bar -->
+  <rect x="110" y="390" width="360" height="6" rx="3" fill="#ffffff" opacity="0.15" />
+  <rect x="110" y="390" width="200" height="6" rx="3" fill="#ffffff" opacity="0.5" />
+
+  <!-- Podcast sound waves -->
+  <g transform="translate(580, 180)">
+    <rect x="0" y="40" width="12" height="80" rx="6" fill="#ffffff" opacity="0.5">
+      <animate attributeName="height" values="80;50;80" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="40;55;40" dur="1.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="22" y="20" width="12" height="120" rx="6" fill="#ffffff" opacity="0.6">
+      <animate attributeName="height" values="120;70;120" dur="1.2s" repeatCount="indefinite" />
+      <animate attributeName="y" values="20;45;20" dur="1.2s" repeatCount="indefinite" />
+    </rect>
+    <rect x="44" y="50" width="12" height="60" rx="6" fill="#ffffff" opacity="0.4">
+      <animate attributeName="height" values="60;90;60" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="y" values="50;35;50" dur="1.8s" repeatCount="indefinite" />
+    </rect>
+    <rect x="66" y="10" width="12" height="140" rx="6" fill="#ffffff" opacity="0.7">
+      <animate attributeName="height" values="140;60;140" dur="1.4s" repeatCount="indefinite" />
+      <animate attributeName="y" values="10;50;10" dur="1.4s" repeatCount="indefinite" />
+    </rect>
+    <rect x="88" y="35" width="12" height="90" rx="6" fill="#ffffff" opacity="0.5">
+      <animate attributeName="height" values="90;120;90" dur="1.6s" repeatCount="indefinite" />
+      <animate attributeName="y" values="35;20;35" dur="1.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="110" y="25" width="12" height="110" rx="6" fill="#ffffff" opacity="0.55" />
+    <rect x="132" y="45" width="12" height="70" rx="6" fill="#ffffff" opacity="0.4" />
+    <rect x="154" y="15" width="12" height="130" rx="6" fill="#ffffff" opacity="0.65" />
+  </g>
+
+  <!-- Content grid cards -->
+  <g transform="translate(800, 140)">
+    <rect x="0" y="0" width="160" height="100" rx="12" fill="url(#card-mbe)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+    <rect x="15" y="15" width="90" height="8" rx="4" fill="#ffffff" opacity="0.4" />
+    <rect x="15" y="32" width="60" height="6" rx="3" fill="#ffffff" opacity="0.2" />
+    <circle cx="130" cy="70" r="18" fill="#f43f5e" opacity="0.4" />
+
+    <rect x="180" y="0" width="160" height="100" rx="12" fill="url(#card-mbe)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+    <rect x="195" y="15" width="80" height="8" rx="4" fill="#ffffff" opacity="0.4" />
+    <rect x="195" y="32" width="100" height="6" rx="3" fill="#ffffff" opacity="0.2" />
+    <circle cx="310" cy="70" r="18" fill="#2563eb" opacity="0.4" />
+
+    <rect x="0" y="120" width="160" height="100" rx="12" fill="url(#card-mbe)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+    <rect x="15" y="135" width="100" height="8" rx="4" fill="#ffffff" opacity="0.4" />
+    <rect x="15" y="152" width="70" height="6" rx="3" fill="#ffffff" opacity="0.2" />
+    <circle cx="130" cy="190" r="18" fill="#ffffff" opacity="0.2" />
+
+    <rect x="180" y="120" width="160" height="100" rx="12" fill="url(#card-mbe)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+    <rect x="195" y="135" width="110" height="8" rx="4" fill="#ffffff" opacity="0.4" />
+    <rect x="195" y="152" width="80" height="6" rx="3" fill="#ffffff" opacity="0.2" />
+    <circle cx="310" cy="190" r="18" fill="#f43f5e" opacity="0.3" />
+  </g>
+
+  <!-- Decorative floating elements -->
+  <circle cx="550" cy="480" r="8" fill="#ffffff" opacity="0.3" />
+  <circle cx="750" cy="520" r="12" fill="#f43f5e" opacity="0.25" />
+  <circle cx="450" cy="100" r="6" fill="#ffffff" opacity="0.4" />
+  <circle cx="950" cy="80" r="10" fill="#ffffff" opacity="0.2" />
+
+  <!-- Bottom wave decoration -->
+  <path d="M0,580 Q300,540 600,570 Q900,600 1200,550 L1200,630 L0,630 Z" fill="#ffffff" opacity="0.05" />
+  <path d="M0,600 Q300,570 600,590 Q900,610 1200,580 L1200,630 L0,630 Z" fill="#ffffff" opacity="0.08" />
+</svg>
