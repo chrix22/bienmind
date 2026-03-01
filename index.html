@@ -20,12 +20,29 @@
         <span class="nav__logo-text">BienMind</span>
       </a>
       <ul class="nav__links">
-        <li><a href="#what-we-do">What We Do</a></li>
-        <li><a href="#focus-areas">Focus Areas</a></li>
-        <li><a href="#editorial-standards">Standards</a></li>
-        <li><a href="#submit">Submit</a></li>
+        <li><a href="#what-we-do"         data-i18n="nav.whatWeDo">What We Do</a></li>
+        <li><a href="#focus-areas"        data-i18n="nav.focusAreas">Focus Areas</a></li>
+        <li><a href="#editorial-standards" data-i18n="nav.standards">Standards</a></li>
+        <li><a href="#submit"             data-i18n="nav.submit">Submit</a></li>
       </ul>
-      <a href="#contact" class="btn btn--outline">Get in Touch</a>
+      <a href="#contact" class="btn btn--outline" data-i18n="nav.contact">Get in Touch</a>
+
+      <!-- Language Picker -->
+      <div class="lang-picker">
+        <button class="lang-picker__btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+          <span class="lang-picker__label" id="langLabel">EN</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="lang-picker__dropdown" id="langDropdown" role="listbox">
+          <li role="option"><button class="lang-picker__option active" data-lang="en">🇬🇧 English</button></li>
+          <li role="option"><button class="lang-picker__option" data-lang="fr">🇫🇷 Français</button></li>
+          <li role="option"><button class="lang-picker__option" data-lang="es">🇪🇸 Español</button></li>
+          <li role="option"><button class="lang-picker__option" data-lang="de">🇩🇪 Deutsch</button></li>
+        </ul>
+      </div>
+
       <button class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -37,27 +54,27 @@
     <!-- ── HERO ─────────────────────────────────────────────────── -->
     <section class="hero" id="hero">
       <div class="container">
-        <div class="hero__eyebrow">Editor &amp; Publisher of AI Services</div>
-        <h1 class="hero__headline">
+        <div class="hero__eyebrow" data-i18n="hero.eyebrow">Editor &amp; Publisher of AI Services</div>
+        <h1 class="hero__headline" data-i18n-html="hero.headline">
           The AI in wellness should be<br />
           <em>worth trusting.</em>
         </h1>
-        <p class="hero__sub">
+        <p class="hero__sub" data-i18n="hero.sub">
           BienMind curates, edits, and publishes AI-powered services for wellness
           and purpose-driven businesses — so practitioners and users can adopt
           transformative technology with confidence.
         </p>
         <div class="hero__actions">
-          <a href="#what-we-do" class="btn btn--primary">Explore Our Work</a>
-          <a href="#submit" class="btn btn--ghost">Submit an AI Service</a>
+          <a href="#what-we-do" class="btn btn--primary" data-i18n="hero.cta1">Explore Our Work</a>
+          <a href="#submit"     class="btn btn--ghost"   data-i18n="hero.cta2">Submit an AI Service</a>
         </div>
         <div class="hero__badge-row">
-          <span class="badge">Mental Health</span>
-          <span class="badge">Nutrition &amp; Fitness</span>
-          <span class="badge">Social Impact</span>
-          <span class="badge">Climate &amp; Sustainability</span>
-          <span class="badge">Mindfulness</span>
-          <span class="badge">Community Care</span>
+          <span class="badge" data-i18n="hero.badge1">Mental Health</span>
+          <span class="badge" data-i18n="hero.badge2">Nutrition &amp; Fitness</span>
+          <span class="badge" data-i18n="hero.badge3">Social Impact</span>
+          <span class="badge" data-i18n="hero.badge4">Climate &amp; Sustainability</span>
+          <span class="badge" data-i18n="hero.badge5">Mindfulness</span>
+          <span class="badge" data-i18n="hero.badge6">Community Care</span>
         </div>
       </div>
       <div class="hero__art" aria-hidden="true">
@@ -70,7 +87,7 @@
     <!-- ── MISSION STRIP ─────────────────────────────────────────── -->
     <section class="mission-strip">
       <div class="container mission-strip__inner">
-        <p class="mission-strip__text">
+        <p class="mission-strip__text" data-i18n-html="mission">
           We believe AI is a powerful force — and <strong>the wellness and do-good
           sectors deserve a trusted editorial voice</strong> to guide which tools
           are safe, effective, and genuinely human-centred.
@@ -82,9 +99,9 @@
     <section class="section what-we-do" id="what-we-do">
       <div class="container">
         <div class="section__header">
-          <div class="section__eyebrow">Our Role</div>
-          <h2>Editor &amp; Publisher,<br />not just a directory</h2>
-          <p class="section__intro">
+          <div class="section__eyebrow" data-i18n="whatWeDo.eyebrow">Our Role</div>
+          <h2 data-i18n-html="whatWeDo.h2">Editor &amp; Publisher,<br />not just a directory</h2>
+          <p class="section__intro" data-i18n="whatWeDo.intro">
             BienMind is the editorial layer the wellness industry was missing.
             We don't just list AI services — we review, shape, and stand behind them.
           </p>
@@ -97,8 +114,8 @@
                 <path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Curation</h3>
-            <p>We source and surface AI services from across the wellness, mental health, nutrition, and social-impact ecosystem — filtering noise so you don't have to.</p>
+            <h3 data-i18n="whatWeDo.card1.title">Curation</h3>
+            <p data-i18n="whatWeDo.card1.desc">We source and surface AI services from across the wellness, mental health, nutrition, and social-impact ecosystem — filtering noise so you don't have to.</p>
           </article>
           <article class="card">
             <div class="card__icon">
@@ -107,8 +124,8 @@
                 <path d="M16 18h16M16 24h12M16 30h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Editorial Review</h3>
-            <p>Every service we publish passes our rigorous editorial process — assessing safety, efficacy, data ethics, inclusivity, and alignment with wellness values.</p>
+            <h3 data-i18n="whatWeDo.card2.title">Editorial Review</h3>
+            <p data-i18n="whatWeDo.card2.desc">Every service we publish passes our rigorous editorial process — assessing safety, efficacy, data ethics, inclusivity, and alignment with wellness values.</p>
           </article>
           <article class="card">
             <div class="card__icon">
@@ -116,8 +133,8 @@
                 <path d="M24 8L28 18H40L30 25L34 36L24 29L14 36L18 25L8 18H20L24 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3>Publishing &amp; Amplification</h3>
-            <p>We publish validated AI services to practitioners, businesses, and consumers — giving mission-aligned products the reach and credibility they deserve.</p>
+            <h3 data-i18n="whatWeDo.card3.title">Publishing &amp; Amplification</h3>
+            <p data-i18n="whatWeDo.card3.desc">We publish validated AI services to practitioners, businesses, and consumers — giving mission-aligned products the reach and credibility they deserve.</p>
           </article>
           <article class="card">
             <div class="card__icon">
@@ -126,8 +143,8 @@
                 <path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.7 9.7l4.2 4.2M34.1 34.1l4.2 4.2M9.7 38.3l4.2-4.2M34.1 13.9l4.2-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Partnership &amp; Co-Creation</h3>
-            <p>We partner with AI developers and wellness organisations to co-create responsible products — embedding our editorial standards from day one.</p>
+            <h3 data-i18n="whatWeDo.card4.title">Partnership &amp; Co-Creation</h3>
+            <p data-i18n="whatWeDo.card4.desc">We partner with AI developers and wellness organisations to co-create responsible products — embedding our editorial standards from day one.</p>
           </article>
         </div>
       </div>
@@ -137,9 +154,9 @@
     <section class="section focus-areas" id="focus-areas">
       <div class="container">
         <div class="section__header">
-          <div class="section__eyebrow">Where We Publish</div>
-          <h2>Focus Areas</h2>
-          <p class="section__intro">
+          <div class="section__eyebrow" data-i18n="focus.eyebrow">Where We Publish</div>
+          <h2 data-i18n="focus.h2">Focus Areas</h2>
+          <p class="section__intro" data-i18n="focus.intro">
             We cover the full spectrum of wellness and purpose-driven business —
             anywhere AI can serve human flourishing.
           </p>
@@ -147,33 +164,33 @@
         <div class="focus-grid">
           <div class="focus-item">
             <div class="focus-item__icon">🧠</div>
-            <h3>Mental Health &amp; Therapy</h3>
-            <p>AI tools supporting mental wellness, therapy access, mood tracking, and crisis intervention — reviewed with clinical sensitivity.</p>
+            <h3 data-i18n="focus.item1.title">Mental Health &amp; Therapy</h3>
+            <p data-i18n="focus.item1.desc">AI tools supporting mental wellness, therapy access, mood tracking, and crisis intervention — reviewed with clinical sensitivity.</p>
           </div>
           <div class="focus-item">
             <div class="focus-item__icon">🌱</div>
-            <h3>Nutrition &amp; Holistic Health</h3>
-            <p>Personalised nutrition, supplement guidance, and integrative health platforms that centre the whole person.</p>
+            <h3 data-i18n="focus.item2.title">Nutrition &amp; Holistic Health</h3>
+            <p data-i18n="focus.item2.desc">Personalised nutrition, supplement guidance, and integrative health platforms that centre the whole person.</p>
           </div>
           <div class="focus-item">
             <div class="focus-item__icon">🧘</div>
-            <h3>Mindfulness &amp; Movement</h3>
-            <p>Meditation, breathwork, sleep, and physical movement applications guided by evidence-based practice.</p>
+            <h3 data-i18n="focus.item3.title">Mindfulness &amp; Movement</h3>
+            <p data-i18n="focus.item3.desc">Meditation, breathwork, sleep, and physical movement applications guided by evidence-based practice.</p>
           </div>
           <div class="focus-item">
             <div class="focus-item__icon">🌍</div>
-            <h3>Climate &amp; Sustainability</h3>
-            <p>AI services helping businesses and individuals reduce environmental impact and operate regeneratively.</p>
+            <h3 data-i18n="focus.item4.title">Climate &amp; Sustainability</h3>
+            <p data-i18n="focus.item4.desc">AI services helping businesses and individuals reduce environmental impact and operate regeneratively.</p>
           </div>
           <div class="focus-item">
             <div class="focus-item__icon">🤝</div>
-            <h3>Social Impact &amp; Equity</h3>
-            <p>Technology that advances equity, inclusion, community care, and access to essential services for underserved populations.</p>
+            <h3 data-i18n="focus.item5.title">Social Impact &amp; Equity</h3>
+            <p data-i18n="focus.item5.desc">Technology that advances equity, inclusion, community care, and access to essential services for underserved populations.</p>
           </div>
           <div class="focus-item">
             <div class="focus-item__icon">🏢</div>
-            <h3>Purpose-Driven Business</h3>
-            <p>AI for B-Corps, nonprofits, co-operatives, and impact-first companies — tools that help doing good scale.</p>
+            <h3 data-i18n="focus.item6.title">Purpose-Driven Business</h3>
+            <p data-i18n="focus.item6.desc">AI for B-Corps, nonprofits, co-operatives, and impact-first companies — tools that help doing good scale.</p>
           </div>
         </div>
       </div>
@@ -184,50 +201,50 @@
       <div class="container">
         <div class="editorial__inner">
           <div class="editorial__left">
-            <div class="section__eyebrow">Our Standards</div>
-            <h2>What makes a BienMind-published service</h2>
-            <p>
+            <div class="section__eyebrow" data-i18n="editorial.eyebrow">Our Standards</div>
+            <h2 data-i18n="editorial.h2">What makes a BienMind-published service</h2>
+            <p data-i18n="editorial.desc">
               We apply the same rigour to AI services that a great editor brings
               to a manuscript — insisting on truth, clarity, and genuine value
               for the reader. Our framework is built on five pillars.
             </p>
-            <a href="#submit" class="btn btn--primary" style="margin-top:2rem">Submit Your Service</a>
+            <a href="#submit" class="btn btn--primary" style="margin-top:2rem" data-i18n="editorial.btn">Submit Your Service</a>
           </div>
           <div class="editorial__right">
             <ol class="standards-list">
               <li class="standard">
                 <div class="standard__num">01</div>
                 <div class="standard__body">
-                  <h4>Evidence &amp; Efficacy</h4>
-                  <p>Claims must be grounded in credible research. We cross-reference scientific literature and consult domain experts.</p>
+                  <h4 data-i18n="editorial.s1.title">Evidence &amp; Efficacy</h4>
+                  <p  data-i18n="editorial.s1.desc">Claims must be grounded in credible research. We cross-reference scientific literature and consult domain experts.</p>
                 </div>
               </li>
               <li class="standard">
                 <div class="standard__num">02</div>
                 <div class="standard__body">
-                  <h4>Data Ethics &amp; Privacy</h4>
-                  <p>We scrutinise data collection, consent practices, and how sensitive wellness data is stored, used, and shared.</p>
+                  <h4 data-i18n="editorial.s2.title">Data Ethics &amp; Privacy</h4>
+                  <p  data-i18n="editorial.s2.desc">We scrutinise data collection, consent practices, and how sensitive wellness data is stored, used, and shared.</p>
                 </div>
               </li>
               <li class="standard">
                 <div class="standard__num">03</div>
                 <div class="standard__body">
-                  <h4>Inclusivity &amp; Accessibility</h4>
-                  <p>Services must work for — and not harm — diverse populations, including those with disabilities or limited digital literacy.</p>
+                  <h4 data-i18n="editorial.s3.title">Inclusivity &amp; Accessibility</h4>
+                  <p  data-i18n="editorial.s3.desc">Services must work for — and not harm — diverse populations, including those with disabilities or limited digital literacy.</p>
                 </div>
               </li>
               <li class="standard">
                 <div class="standard__num">04</div>
                 <div class="standard__body">
-                  <h4>Transparency &amp; Explainability</h4>
-                  <p>AI decision-making should be understandable to users. We require clear disclosures on how recommendations are generated.</p>
+                  <h4 data-i18n="editorial.s4.title">Transparency &amp; Explainability</h4>
+                  <p  data-i18n="editorial.s4.desc">AI decision-making should be understandable to users. We require clear disclosures on how recommendations are generated.</p>
                 </div>
               </li>
               <li class="standard">
                 <div class="standard__num">05</div>
                 <div class="standard__body">
-                  <h4>Mission Alignment</h4>
-                  <p>Every published service must genuinely serve human or planetary wellbeing — not exploit it.</p>
+                  <h4 data-i18n="editorial.s5.title">Mission Alignment</h4>
+                  <p  data-i18n="editorial.s5.desc">Every published service must genuinely serve human or planetary wellbeing — not exploit it.</p>
                 </div>
               </li>
             </ol>
@@ -240,9 +257,9 @@
     <section class="section for-builders" id="submit">
       <div class="container">
         <div class="section__header">
-          <div class="section__eyebrow">For AI Builders</div>
-          <h2>Building AI for wellness or social good?</h2>
-          <p class="section__intro">
+          <div class="section__eyebrow" data-i18n="builders.eyebrow">For AI Builders</div>
+          <h2 data-i18n="builders.h2">Building AI for wellness or social good?</h2>
+          <p class="section__intro" data-i18n="builders.intro">
             BienMind is your editorial partner. We help responsible AI teams
             reach the right audiences, build trust with practitioners,
             and articulate their value clearly.
@@ -250,34 +267,34 @@
         </div>
         <div class="builder-grid">
           <div class="builder-card">
-            <h3>Submit Your Service</h3>
-            <p>Open to AI startups, research teams, and established companies building tools that genuinely serve wellness or social-good missions.</p>
+            <h3 data-i18n="builders.card1.title">Submit Your Service</h3>
+            <p  data-i18n="builders.card1.desc">Open to AI startups, research teams, and established companies building tools that genuinely serve wellness or social-good missions.</p>
             <ul class="check-list">
-              <li>Editorial review within 4 weeks</li>
-              <li>Detailed feedback regardless of outcome</li>
-              <li>Re-submission pathway for revised products</li>
+              <li data-i18n="builders.card1.li1">Editorial review within 4 weeks</li>
+              <li data-i18n="builders.card1.li2">Detailed feedback regardless of outcome</li>
+              <li data-i18n="builders.card1.li3">Re-submission pathway for revised products</li>
             </ul>
-            <a href="#contact" class="btn btn--primary">Start a Submission</a>
+            <a href="#contact" class="btn btn--primary" data-i18n="builders.card1.btn">Start a Submission</a>
           </div>
           <div class="builder-card builder-card--accent">
-            <h3>Editorial Partnership</h3>
-            <p>Work with our editors from early product stages to build something that meets our standards from the ground up.</p>
+            <h3 data-i18n="builders.card2.title">Editorial Partnership</h3>
+            <p  data-i18n="builders.card2.desc">Work with our editors from early product stages to build something that meets our standards from the ground up.</p>
             <ul class="check-list">
-              <li>Embedded editorial guidance</li>
-              <li>Co-authorship of white papers &amp; case studies</li>
-              <li>Access to our wellness practitioner network</li>
+              <li data-i18n="builders.card2.li1">Embedded editorial guidance</li>
+              <li data-i18n="builders.card2.li2">Co-authorship of white papers &amp; case studies</li>
+              <li data-i18n="builders.card2.li3">Access to our wellness practitioner network</li>
             </ul>
-            <a href="#contact" class="btn btn--primary">Explore Partnership</a>
+            <a href="#contact" class="btn btn--primary" data-i18n="builders.card2.btn">Explore Partnership</a>
           </div>
           <div class="builder-card">
-            <h3>Publisher Distribution</h3>
-            <p>Approved services are published across our channels, reaching wellness professionals, impact investors, and purpose-driven organisations.</p>
+            <h3 data-i18n="builders.card3.title">Publisher Distribution</h3>
+            <p  data-i18n="builders.card3.desc">Approved services are published across our channels, reaching wellness professionals, impact investors, and purpose-driven organisations.</p>
             <ul class="check-list">
-              <li>Featured placements in BienMind publications</li>
-              <li>Introductions to aligned partners</li>
-              <li>Ongoing editorial coverage</li>
+              <li data-i18n="builders.card3.li1">Featured placements in BienMind publications</li>
+              <li data-i18n="builders.card3.li2">Introductions to aligned partners</li>
+              <li data-i18n="builders.card3.li3">Ongoing editorial coverage</li>
             </ul>
-            <a href="#contact" class="btn btn--primary">Learn More</a>
+            <a href="#contact" class="btn btn--primary" data-i18n="builders.card3.btn">Learn More</a>
           </div>
         </div>
       </div>
@@ -288,50 +305,55 @@
       <div class="container">
         <div class="contact__inner">
           <div class="contact__left">
-            <div class="section__eyebrow">Get in Touch</div>
-            <h2>Let's talk about AI that does good.</h2>
-            <p>Whether you're a wellness practitioner, an AI builder, an investor, or an organisation looking for guidance — we'd love to hear from you.</p>
+            <div class="section__eyebrow" data-i18n="contact.eyebrow">Get in Touch</div>
+            <h2 data-i18n="contact.h2">Let's talk about AI that does good.</h2>
+            <p data-i18n="contact.desc">Whether you're a wellness practitioner, an AI builder, an investor, or an organisation looking for guidance — we'd love to hear from you.</p>
             <div class="contact__info">
               <div class="contact__item">
-                <strong>General Enquiries</strong>
+                <strong data-i18n="contact.gen.label">General Enquiries</strong>
                 <span>hello@bienmind.co</span>
               </div>
               <div class="contact__item">
-                <strong>Editorial Submissions</strong>
+                <strong data-i18n="contact.sub.label">Editorial Submissions</strong>
                 <span>submit@bienmind.co</span>
               </div>
               <div class="contact__item">
-                <strong>Partnerships</strong>
+                <strong data-i18n="contact.part.label">Partnerships</strong>
                 <span>partners@bienmind.co</span>
               </div>
             </div>
           </div>
           <form class="contact__form" novalidate>
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <label for="name" data-i18n="contact.form.name.label">Name</label>
+              <input type="text" id="name" name="name"
+                     data-i18n-placeholder="contact.form.name.placeholder"
+                     placeholder="Your name" required />
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <label for="email" data-i18n="contact.form.email.label">Email</label>
+              <input type="email" id="email" name="email"
+                     placeholder="you@example.com" required />
             </div>
             <div class="form-group">
-              <label for="role">I am a…</label>
+              <label for="role" data-i18n="contact.form.role.label">I am a…</label>
               <select id="role" name="role">
-                <option value="">Select your role</option>
-                <option value="builder">AI Builder / Startup</option>
-                <option value="practitioner">Wellness Practitioner</option>
-                <option value="organisation">Organisation / Nonprofit</option>
-                <option value="investor">Investor / Funder</option>
-                <option value="press">Press / Media</option>
-                <option value="other">Other</option>
+                <option value=""            data-i18n="contact.form.role.default">Select your role</option>
+                <option value="builder"     data-i18n="contact.form.role.builder">AI Builder / Startup</option>
+                <option value="practitioner" data-i18n="contact.form.role.practitioner">Wellness Practitioner</option>
+                <option value="organisation" data-i18n="contact.form.role.org">Organisation / Nonprofit</option>
+                <option value="investor"    data-i18n="contact.form.role.investor">Investor / Funder</option>
+                <option value="press"       data-i18n="contact.form.role.press">Press / Media</option>
+                <option value="other"       data-i18n="contact.form.role.other">Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us what you're working on…" required></textarea>
+              <label for="message" data-i18n="contact.form.msg.label">Message</label>
+              <textarea id="message" name="message" rows="5"
+                        data-i18n-placeholder="contact.form.msg.placeholder"
+                        placeholder="Tell us what you're working on…" required></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="contact.form.submit">Send Message</button>
           </form>
         </div>
       </div>
@@ -348,37 +370,38 @@
             <span class="nav__logo-mark">✦</span>
             <span class="nav__logo-text">BienMind</span>
           </a>
-          <p class="footer__tagline">Editor &amp; Publisher of AI Services for Wellness and Do-Good Business</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Editor &amp; Publisher of AI Services for Wellness and Do-Good Business</p>
         </div>
         <nav class="footer__nav" aria-label="Footer navigation">
           <div class="footer__col">
-            <h4>Company</h4>
+            <h4 data-i18n="footer.col1.title">Company</h4>
             <ul>
-              <li><a href="#what-we-do">What We Do</a></li>
-              <li><a href="#focus-areas">Focus Areas</a></li>
-              <li><a href="#editorial-standards">Our Standards</a></li>
+              <li><a href="#what-we-do"         data-i18n="footer.col1.l1">What We Do</a></li>
+              <li><a href="#focus-areas"        data-i18n="footer.col1.l2">Focus Areas</a></li>
+              <li><a href="#editorial-standards" data-i18n="footer.col1.l3">Our Standards</a></li>
             </ul>
           </div>
           <div class="footer__col">
-            <h4>Work With Us</h4>
+            <h4 data-i18n="footer.col2.title">Work With Us</h4>
             <ul>
-              <li><a href="#submit">Submit a Service</a></li>
-              <li><a href="#submit">Editorial Partnership</a></li>
-              <li><a href="#contact">Get in Touch</a></li>
+              <li><a href="#submit"  data-i18n="footer.col2.l1">Submit a Service</a></li>
+              <li><a href="#submit"  data-i18n="footer.col2.l2">Editorial Partnership</a></li>
+              <li><a href="#contact" data-i18n="footer.col2.l3">Get in Touch</a></li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 BienMind. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 BienMind. All rights reserved.</p>
         <div class="footer__legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms of Use</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
