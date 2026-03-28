@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow5" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="aura5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:0.3" />
+      <stop offset="60%" style="stop-color:#6366f1;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg5)" />
+  <rect width="1200" height="630" fill="url(#glow5)" />
+
+  <!-- Soft ambient circles -->
+  <circle cx="100" cy="500" r="200" fill="#14b8a6" opacity="0.08" />
+  <circle cx="1100" cy="130" r="180" fill="#6366f1" opacity="0.1" />
+
+  <!-- Aura around meditating figure -->
+  <circle cx="600" cy="320" r="200" fill="url(#aura5)" />
+
+  <!-- Expanding meditation rings -->
+  <circle cx="600" cy="320" r="100" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.15" />
+  <circle cx="600" cy="320" r="140" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.12" />
+  <circle cx="600" cy="320" r="180" fill="none" stroke="#ffffff" stroke-width="0.6" opacity="0.09" />
+  <circle cx="600" cy="320" r="220" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.06" />
+  <circle cx="600" cy="320" r="260" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04" />
+
+  <!-- Abstract meditating figure -->
+  <!-- Head -->
+  <circle cx="600" cy="240" r="25" fill="#ffffff" opacity="0.2" stroke="#ffffff" stroke-width="2" opacity="0.5" />
+  <!-- Body - cross legged -->
+  <path d="M600 265 Q600 300 580 330 Q560 360 540 370" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.5" stroke-linecap="round" />
+  <path d="M600 265 Q600 300 620 330 Q640 360 660 370" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.5" stroke-linecap="round" />
+  <!-- Arms -->
+  <path d="M590 285 Q560 310 545 320 Q535 325 530 318" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4" stroke-linecap="round" />
+  <path d="M610 285 Q640 310 655 320 Q665 325 670 318" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4" stroke-linecap="round" />
+  <!-- Legs base -->
+  <path d="M540 370 Q560 380 600 375 Q640 380 660 370" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4" stroke-linecap="round" />
+
+  <!-- Calm waves at bottom -->
+  <path d="M0 520 Q150 500 300 520 Q450 540 600 520 Q750 500 900 520 Q1050 540 1200 520" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.12" />
+  <path d="M0 545 Q150 525 300 545 Q450 565 600 545 Q750 525 900 545 Q1050 565 1200 545" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.08" />
+  <path d="M0 570 Q150 550 300 570 Q450 590 600 570 Q750 550 900 570 Q1050 590 1200 570" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.05" />
+
+  <!-- Lotus petals abstract -->
+  <g transform="translate(600, 400)" opacity="0.2">
+    <path d="M0 0 Q-15 -25 0 -40 Q15 -25 0 0Z" fill="#ffffff" />
+    <path d="M0 0 Q-30 -15 -35 -30 Q-15 -30 0 -10Z" fill="#ffffff" opacity="0.7" />
+    <path d="M0 0 Q30 -15 35 -30 Q15 -30 0 -10Z" fill="#ffffff" opacity="0.7" />
+    <path d="M0 0 Q-35 -5 -42 -18 Q-25 -25 -5 -10Z" fill="#ffffff" opacity="0.5" />
+    <path d="M0 0 Q35 -5 42 -18 Q25 -25 5 -10Z" fill="#ffffff" opacity="0.5" />
+  </g>
+
+  <!-- Floating energy dots -->
+  <circle cx="500" cy="200" r="4" fill="#ffffff" opacity="0.4" />
+  <circle cx="700" cy="200" r="4" fill="#ffffff" opacity="0.4" />
+  <circle cx="480" cy="260" r="3" fill="#14b8a6" opacity="0.5" />
+  <circle cx="720" cy="260" r="3" fill="#14b8a6" opacity="0.5" />
+  <circle cx="520" cy="170" r="2" fill="#ffffff" opacity="0.3" />
+  <circle cx="680" cy="170" r="2" fill="#ffffff" opacity="0.3" />
+
+  <!-- Stars / light particles -->
+  <circle cx="200" cy="180" r="3" fill="#ffffff" opacity="0.35" />
+  <circle cx="350" cy="120" r="2" fill="#ffffff" opacity="0.25" />
+  <circle cx="900" cy="200" r="3" fill="#ffffff" opacity="0.3" />
+  <circle cx="1000" cy="300" r="2" fill="#ffffff" opacity="0.25" />
+  <circle cx="150" cy="350" r="2" fill="#ffffff" opacity="0.2" />
+  <circle cx="1050" cy="450" r="3" fill="#ffffff" opacity="0.2" />
+  <circle cx="300" cy="450" r="2" fill="#ffffff" opacity="0.15" />
+  <circle cx="850" cy="100" r="2" fill="#ffffff" opacity="0.3" />
+
+  <!-- App-like rounded rect hints - left -->
+  <rect x="80" y="220" width="120" height="80" rx="16" fill="#ffffff" opacity="0.05" stroke="#ffffff" stroke-width="1" opacity="0.1" />
+  <circle cx="110" cy="250" r="10" fill="#14b8a6" opacity="0.15" />
+  <rect x="130" y="244" width="50" height="5" rx="2.5" fill="#ffffff" opacity="0.1" />
+  <rect x="130" y="256" width="35" height="4" rx="2" fill="#ffffff" opacity="0.07" />
+
+  <!-- App-like rounded rect hints - right -->
+  <rect x="1000" y="320" width="120" height="80" rx="16" fill="#ffffff" opacity="0.05" stroke="#ffffff" stroke-width="1" opacity="0.1" />
+  <circle cx="1030" cy="350" r="10" fill="#6366f1" opacity="0.15" />
+  <rect x="1050" y="344" width="50" height="5" rx="2.5" fill="#ffffff" opacity="0.1" />
+  <rect x="1050" y="356" width="35" height="4" rx="2" fill="#ffffff" opacity="0.07" />
+
+  <!-- Third eye / chakra dot -->
+  <circle cx="600" cy="235" r="4" fill="#14b8a6" opacity="0.5" />
+</svg>

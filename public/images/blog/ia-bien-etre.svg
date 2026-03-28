@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent1a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.4" />
+    </linearGradient>
+    <linearGradient id="accent1b" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.9" />
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg1)" />
+  <rect width="1200" height="630" fill="url(#glow1)" />
+
+  <!-- Soft background circles -->
+  <circle cx="200" cy="500" r="180" fill="#ffffff" opacity="0.05" />
+  <circle cx="1000" cy="130" r="220" fill="#ffffff" opacity="0.05" />
+  <circle cx="600" cy="600" r="300" fill="#10b981" opacity="0.08" />
+
+  <!-- Abstract brain - left hemisphere -->
+  <path d="M500 200 Q460 180 440 220 Q420 260 450 290 Q430 320 460 350 Q440 380 480 390 Q490 420 530 410 Q560 430 580 400 Q600 420 600 380" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7" />
+  <!-- Abstract brain - right hemisphere -->
+  <path d="M600 380 Q600 420 620 400 Q640 430 670 410 Q710 420 720 390 Q760 380 740 350 Q770 320 750 290 Q780 260 760 220 Q740 180 700 200" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7" />
+  <!-- Brain connection -->
+  <path d="M600 200 Q590 240 600 280 Q610 320 600 380" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.5" />
+
+  <!-- Neural network dots on brain -->
+  <circle cx="470" cy="260" r="6" fill="#ffffff" opacity="0.8" />
+  <circle cx="520" cy="230" r="5" fill="#ffffff" opacity="0.7" />
+  <circle cx="500" cy="310" r="7" fill="#ffffff" opacity="0.6" />
+  <circle cx="480" cy="370" r="5" fill="#ffffff" opacity="0.8" />
+  <circle cx="550" cy="350" r="6" fill="#ffffff" opacity="0.7" />
+  <circle cx="600" cy="280" r="8" fill="#ffffff" opacity="0.9" />
+  <circle cx="650" cy="350" r="6" fill="#ffffff" opacity="0.7" />
+  <circle cx="700" cy="260" r="6" fill="#ffffff" opacity="0.8" />
+  <circle cx="680" cy="230" r="5" fill="#ffffff" opacity="0.7" />
+  <circle cx="720" cy="370" r="5" fill="#ffffff" opacity="0.8" />
+  <circle cx="730" cy="310" r="7" fill="#ffffff" opacity="0.6" />
+
+  <!-- Neural connections -->
+  <line x1="470" y1="260" x2="520" y2="230" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  <line x1="520" y1="230" x2="600" y2="280" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  <line x1="500" y1="310" x2="600" y2="280" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  <line x1="600" y1="280" x2="700" y2="260" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  <line x1="600" y1="280" x2="650" y2="350" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  <line x1="680" y1="230" x2="700" y2="260" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+  <line x1="700" y1="260" x2="730" y2="310" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+
+  <!-- Leaf element - left -->
+  <path d="M180 280 Q220 240 260 280 Q220 320 180 280Z" fill="url(#accent1b)" opacity="0.6" />
+  <line x1="180" y1="280" x2="260" y2="280" stroke="#ffffff" stroke-width="1" opacity="0.4" />
+
+  <!-- Leaf element - right -->
+  <path d="M900 340 Q940 300 980 340 Q940 380 900 340Z" fill="url(#accent1b)" opacity="0.5" />
+  <line x1="900" y1="340" x2="980" y2="340" stroke="#ffffff" stroke-width="1" opacity="0.4" />
+
+  <!-- Small leaf top -->
+  <path d="M750 120 Q770 100 790 120 Q770 140 750 120Z" fill="#10b981" opacity="0.4" />
+
+  <!-- Floating wellness circles -->
+  <circle cx="150" cy="150" r="40" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" />
+  <circle cx="150" cy="150" r="25" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" />
+  <circle cx="1050" cy="480" r="50" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" />
+  <circle cx="1050" cy="480" r="30" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" />
+
+  <!-- Organic circles representing harmony -->
+  <circle cx="340" cy="450" r="35" fill="#10b981" opacity="0.15" />
+  <circle cx="360" cy="430" r="25" fill="#ffffff" opacity="0.08" />
+  <circle cx="860" cy="200" r="30" fill="#2563eb" opacity="0.15" />
+  <circle cx="880" cy="180" r="20" fill="#ffffff" opacity="0.08" />
+
+  <!-- Small decorative dots -->
+  <circle cx="300" cy="160" r="4" fill="#ffffff" opacity="0.4" />
+  <circle cx="920" cy="420" r="4" fill="#ffffff" opacity="0.4" />
+  <circle cx="400" cy="520" r="3" fill="#ffffff" opacity="0.3" />
+  <circle cx="800" cy="500" r="5" fill="#ffffff" opacity="0.3" />
+  <circle cx="650" cy="130" r="3" fill="#ffffff" opacity="0.4" />
+  <circle cx="350" cy="350" r="3" fill="#ffffff" opacity="0.25" />
+
+  <!-- Gentle pulse rings around brain -->
+  <circle cx="600" cy="310" r="140" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" />
+  <circle cx="600" cy="310" r="180" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.07" />
+  <circle cx="600" cy="310" r="220" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.05" />
+</svg>
