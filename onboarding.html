@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to Sonocrea — your personalised AI sound therapy companion for wellness and mental health." />
+  <title>Sonocrea — Get Started</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/onboarding.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="onboarding-body">
+
+  <!-- ── ONBOARDING SHELL ──────────────────────────────────────────── -->
+  <div class="ob-shell" id="onboarding">
+
+    <!-- Header -->
+    <header class="ob-header">
+      <a href="/" class="ob-logo" aria-label="Back to BienMind">
+        <span class="nav__logo-mark">✦</span>
+        <span class="nav__logo-text">Sonocrea</span>
+      </a>
+      <div class="ob-header__right">
+        <span class="ob-step-label" id="stepLabel">Step 1 of 6</span>
+        <a href="#" class="ob-skip" id="skipBtn">Skip for now</a>
+      </div>
+    </header>
+
+    <!-- Progress bar -->
+    <div class="ob-progress" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="6" aria-label="Onboarding progress">
+      <div class="ob-progress__bar" id="progressBar" style="width: 16.66%"></div>
+    </div>
+
+    <!-- ── STEP 1 · WELCOME ───────────────────────────────────────── -->
+    <section class="ob-step ob-step--active" data-step="1" id="step1" aria-live="polite">
+      <div class="ob-step__inner ob-step--center">
+        <div class="ob-icon ob-icon--pulse">🎵</div>
+        <h1 class="ob-title">Welcome to Sonocrea</h1>
+        <p class="ob-subtitle">
+          Sonocrea uses AI to generate personalised soundscapes that support
+          your mental wellness — from focus and calm to deep sleep and recovery.
+        </p>
+        <p class="ob-body">
+          We'll ask you a few quick questions so we can tailor your experience.
+          It takes about 2 minutes.
+        </p>
+        <div class="ob-actions ob-actions--center">
+          <button class="btn btn--primary ob-next" data-next="2">Let's get started</button>
+        </div>
+        <p class="ob-footnote">
+          Published by <a href="/">BienMind</a> — editorially reviewed for safety, efficacy, and data ethics.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── STEP 2 · GOALS ─────────────────────────────────────────── -->
+    <section class="ob-step" data-step="2" id="step2" aria-live="polite">
+      <div class="ob-step__inner">
+        <div class="ob-eyebrow">Your Goals</div>
+        <h2 class="ob-title">What brings you to Sonocrea?</h2>
+        <p class="ob-subtitle">Select all that apply. We'll use this to curate your first soundscapes.</p>
+        <div class="ob-cards" role="group" aria-label="Select your wellness goals">
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="stress" class="ob-card__input" />
+            <span class="ob-card__icon">😮‍💨</span>
+            <span class="ob-card__label">Reduce stress &amp; anxiety</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="focus" class="ob-card__input" />
+            <span class="ob-card__icon">🎯</span>
+            <span class="ob-card__label">Improve focus &amp; productivity</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="sleep" class="ob-card__input" />
+            <span class="ob-card__icon">🌙</span>
+            <span class="ob-card__label">Better sleep quality</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="meditation" class="ob-card__input" />
+            <span class="ob-card__icon">🧘</span>
+            <span class="ob-card__label">Support meditation &amp; mindfulness</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="mood" class="ob-card__input" />
+            <span class="ob-card__icon">🌤️</span>
+            <span class="ob-card__label">Lift my mood</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="creativity" class="ob-card__input" />
+            <span class="ob-card__icon">🎨</span>
+            <span class="ob-card__label">Boost creativity</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="pain" class="ob-card__input" />
+            <span class="ob-card__icon">💆</span>
+            <span class="ob-card__label">Manage chronic pain or tension</span>
+          </label>
+          <label class="ob-card" tabindex="0">
+            <input type="checkbox" name="goals" value="explore" class="ob-card__input" />
+            <span class="ob-card__icon">🔍</span>
+            <span class="ob-card__label">Just exploring</span>
+          </label>
+        </div>
+        <div class="ob-actions">
+          <button class="btn btn--outline ob-back" data-back="1">Back</button>
+          <button class="btn btn--primary ob-next" data-next="3">Continue</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STEP 3 · SOUND PREFERENCES ───────────────────────────────── -->
+    <section class="ob-step" data-step="3" id="step3" aria-live="polite">
+      <div class="ob-step__inner">
+        <div class="ob-eyebrow">Sound Profile</div>
+        <h2 class="ob-title">What sounds do you naturally gravitate towards?</h2>
+        <p class="ob-subtitle">Pick up to three. This shapes your personal sound palette.</p>
+        <div class="ob-cards ob-cards--3col" role="group" aria-label="Select preferred sound types">
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="nature" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">🌿</span>
+            <span class="ob-card__label">Nature &amp; forests</span>
+            <span class="ob-card__desc">Rain, rivers, birdsong</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="ocean" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">🌊</span>
+            <span class="ob-card__label">Ocean &amp; water</span>
+            <span class="ob-card__desc">Waves, streams, tides</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="ambient" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">🎹</span>
+            <span class="ob-card__label">Ambient music</span>
+            <span class="ob-card__desc">Drones, pads, slow melodies</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="binaural" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">🎧</span>
+            <span class="ob-card__label">Binaural beats</span>
+            <span class="ob-card__desc">Theta, alpha, delta waves</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="bowls" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">🔔</span>
+            <span class="ob-card__label">Singing bowls</span>
+            <span class="ob-card__desc">Crystal and Tibetan tones</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="whitenoise" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">📡</span>
+            <span class="ob-card__label">White &amp; brown noise</span>
+            <span class="ob-card__desc">Steady, masking background</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="urban" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">☕</span>
+            <span class="ob-card__label">Urban ambience</span>
+            <span class="ob-card__desc">Café, library, light rain</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="frequency" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">〰️</span>
+            <span class="ob-card__label">Solfeggio frequencies</span>
+            <span class="ob-card__desc">396 Hz, 528 Hz, 741 Hz</span>
+          </label>
+          <label class="ob-card ob-card--tall" tabindex="0">
+            <input type="checkbox" name="sounds" value="guided" class="ob-card__input ob-limit-3" />
+            <span class="ob-card__icon">🗣️</span>
+            <span class="ob-card__label">Guided voice &amp; sound</span>
+            <span class="ob-card__desc">Gentle narration + music</span>
+          </label>
+        </div>
+        <div class="ob-actions">
+          <button class="btn btn--outline ob-back" data-back="2">Back</button>
+          <button class="btn btn--primary ob-next" data-next="4">Continue</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STEP 4 · PRACTICE HABITS ─────────────────────────────────── -->
+    <section class="ob-step" data-step="4" id="step4" aria-live="polite">
+      <div class="ob-step__inner">
+        <div class="ob-eyebrow">Your Routine</div>
+        <h2 class="ob-title">When do you usually want to listen?</h2>
+        <p class="ob-subtitle">We'll schedule gentle reminders around your preferred times.</p>
+
+        <div class="ob-form-group">
+          <label class="ob-label">Best time of day</label>
+          <div class="ob-chips" role="group" aria-label="Preferred listening time">
+            <label class="ob-chip"><input type="radio" name="time" value="morning" /><span>🌅 Morning</span></label>
+            <label class="ob-chip"><input type="radio" name="time" value="afternoon" /><span>☀️ Afternoon</span></label>
+            <label class="ob-chip"><input type="radio" name="time" value="evening" /><span>🌆 Evening</span></label>
+            <label class="ob-chip"><input type="radio" name="time" value="night" /><span>🌙 Night</span></label>
+            <label class="ob-chip"><input type="radio" name="time" value="flexible" /><span>🔄 Flexible</span></label>
+          </div>
+        </div>
+
+        <div class="ob-form-group">
+          <label class="ob-label">Ideal session length</label>
+          <div class="ob-chips" role="group" aria-label="Session length preference">
+            <label class="ob-chip"><input type="radio" name="duration" value="5" /><span>5 min</span></label>
+            <label class="ob-chip"><input type="radio" name="duration" value="10" /><span>10 min</span></label>
+            <label class="ob-chip"><input type="radio" name="duration" value="20" /><span>20 min</span></label>
+            <label class="ob-chip"><input type="radio" name="duration" value="30" /><span>30 min</span></label>
+            <label class="ob-chip"><input type="radio" name="duration" value="60" /><span>60 min +</span></label>
+          </div>
+        </div>
+
+        <div class="ob-form-group">
+          <label class="ob-label">How often would you like to practice?</label>
+          <div class="ob-chips" role="group" aria-label="Practice frequency">
+            <label class="ob-chip"><input type="radio" name="frequency" value="daily" /><span>Daily</span></label>
+            <label class="ob-chip"><input type="radio" name="frequency" value="several" /><span>Several times a week</span></label>
+            <label class="ob-chip"><input type="radio" name="frequency" value="weekly" /><span>Once a week</span></label>
+            <label class="ob-chip"><input type="radio" name="frequency" value="asneeded" /><span>As needed</span></label>
+          </div>
+        </div>
+
+        <div class="ob-actions">
+          <button class="btn btn--outline ob-back" data-back="3">Back</button>
+          <button class="btn btn--primary ob-next" data-next="5">Continue</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STEP 5 · ACCOUNT SETUP ────────────────────────────────────── -->
+    <section class="ob-step" data-step="5" id="step5" aria-live="polite">
+      <div class="ob-step__inner">
+        <div class="ob-eyebrow">Your Account</div>
+        <h2 class="ob-title">Create your Sonocrea profile</h2>
+        <p class="ob-subtitle">Your progress and personalised soundscapes will be saved here.</p>
+
+        <form class="ob-form" id="profileForm" novalidate>
+          <div class="ob-form-group">
+            <label class="ob-label" for="ob-name">First name</label>
+            <input
+              class="ob-input"
+              type="text"
+              id="ob-name"
+              name="firstName"
+              placeholder="Your first name"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+          <div class="ob-form-group">
+            <label class="ob-label" for="ob-email">Email address</label>
+            <input
+              class="ob-input"
+              type="email"
+              id="ob-email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="ob-form-group">
+            <label class="ob-label" for="ob-password">Choose a password</label>
+            <input
+              class="ob-input"
+              type="password"
+              id="ob-password"
+              name="password"
+              placeholder="At least 8 characters"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            />
+          </div>
+
+          <label class="ob-checkbox">
+            <input type="checkbox" name="consent" id="ob-consent" required />
+            <span>
+              I agree to Sonocrea's
+              <a href="#" class="ob-link">Terms of Use</a> and
+              <a href="#" class="ob-link">Privacy Policy</a>.
+              My wellness data will never be sold or shared with third parties.
+            </span>
+          </label>
+
+          <label class="ob-checkbox">
+            <input type="checkbox" name="marketing" id="ob-marketing" />
+            <span>Send me personalised tips and new soundscape recommendations (optional).</span>
+          </label>
+
+          <div class="ob-divider"><span>or continue with</span></div>
+
+          <div class="ob-social-row">
+            <button type="button" class="ob-social-btn">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 01-1.796 2.716v2.259h2.908C16.658 14.124 17.64 11.863 17.64 9.2z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z" fill="#34A853"/><path d="M3.964 10.706A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.706V4.962H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.038l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.962L3.964 7.294C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
+              Sign up with Google
+            </button>
+            <button type="button" class="ob-social-btn">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 0C4.029 0 0 4.029 0 9c0 3.977 2.579 7.343 6.155 8.538.45.082.615-.195.615-.433 0-.214-.008-.779-.012-1.53-2.502.543-3.03-1.206-3.03-1.206-.409-1.04-1-1.317-1-1.317-.817-.559.062-.548.062-.548.903.064 1.378.928 1.378.928.803 1.375 2.108.977 2.62.748.082-.582.314-.978.572-1.202-2-.227-4.103-1-4.103-4.453 0-.984.351-1.788.928-2.418-.093-.228-.402-1.143.088-2.382 0 0 .756-.242 2.476.923A8.626 8.626 0 019 4.385c.766.004 1.537.104 2.258.303 1.719-1.165 2.474-.923 2.474-.923.491 1.239.182 2.154.089 2.382.578.63.926 1.434.926 2.418 0 3.462-2.107 4.224-4.113 4.447.323.279.611.829.611 1.671 0 1.206-.011 2.179-.011 2.476 0 .24.163.52.619.432C15.424 16.34 18 12.975 18 9c0-4.971-4.029-9-9-9z" fill="#24292F"/></svg>
+              Sign up with GitHub
+            </button>
+          </div>
+        </form>
+
+        <div class="ob-actions">
+          <button class="btn btn--outline ob-back" data-back="4">Back</button>
+          <button class="btn btn--primary" id="createAccountBtn">Create my account</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STEP 6 · READY ─────────────────────────────────────────── -->
+    <section class="ob-step" data-step="6" id="step6" aria-live="polite">
+      <div class="ob-step__inner ob-step--center">
+        <div class="ob-icon ob-icon--success">✅</div>
+        <h2 class="ob-title">You're all set, <span id="userFirstName">friend</span>!</h2>
+        <p class="ob-subtitle">
+          Your personalised Sonocrea experience is ready.
+          We've prepared your first soundscapes based on your preferences.
+        </p>
+
+        <div class="ob-summary" id="profileSummary" aria-label="Your profile summary">
+          <div class="ob-summary__item" id="summaryGoals">
+            <span class="ob-summary__icon">🎯</span>
+            <div>
+              <strong>Your goals</strong>
+              <p id="summaryGoalsText">Stress relief &amp; better sleep</p>
+            </div>
+          </div>
+          <div class="ob-summary__item" id="summarySounds">
+            <span class="ob-summary__icon">🎵</span>
+            <div>
+              <strong>Sound palette</strong>
+              <p id="summarySoundsText">Nature, Ambient music, Binaural beats</p>
+            </div>
+          </div>
+          <div class="ob-summary__item" id="summarySchedule">
+            <span class="ob-summary__icon">⏰</span>
+            <div>
+              <strong>Your schedule</strong>
+              <p id="summaryScheduleText">Daily · Evening · 20 min</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ob-actions ob-actions--center ob-actions--stack">
+          <a href="#" class="btn btn--primary ob-cta-main">Start my first session 🎵</a>
+          <a href="#" class="btn btn--ghost ob-cta-secondary">Explore all soundscapes</a>
+        </div>
+
+        <p class="ob-footnote">
+          Sonocrea is reviewed and published by
+          <a href="/">BienMind</a> under our
+          <a href="/#editorial-standards">Editorial Standards</a> —
+          evidence-based, ethically designed, and human-centred.
+        </p>
+      </div>
+    </section>
+
+  </div><!-- /ob-shell -->
+
+  <script src="js/onboarding.js"></script>
+</body>
+</html>
