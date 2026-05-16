@@ -1,16 +1,11 @@
-FROM nginx:alpine
+FROM ghcr.io/nginxinc/nginx-unprivileged:alpine
 
-# Copy static files
-COPY . /usr/share/nginx/html/
-
-# Remove unnecessary files
-RUN rm -f /usr/share/nginx/html/Dockerfile \
-    /usr/share/nginx/html/docker-compose.yml \
-    /usr/share/nginx/html/.dockerignore
+# Copy static files (excluded files in .dockerignore)
+COPY --chown=nginx:nginx . /usr/share/nginx/html/
 
 # Copy nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --chown=nginx:nginx nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
