@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    container_name: bienmind-web
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.bienmind.rule=Host(`bienmind.com`) || Host(`www.bienmind.com`)"
+      - "traefik.http.routers.bienmind.entrypoints=websecure"
+      - "traefik.http.routers.bienmind.tls.certresolver=letsencrypt"
+      - "traefik.http.services.bienmind.loadbalancer.server.port=8080"
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+    external: true

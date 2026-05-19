@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Bienmind - Actualités IA, bien-être au travail, et innovations technologiques pour améliorer la qualité de vie professionnelle.">
+    <meta name="keywords" content="blog IA, intelligence artificielle, bien-être travail, AaaS, Agent as a Service, automatisation, productivité">
+    <meta name="author" content="Bienmind">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bienmind.com/blog/">
+
+    <title>Blog | Bienmind - IA, Bien-être et Innovation</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bienmind.com/blog/">
+    <meta property="og:title" content="Blog Bienmind - IA, Bien-être et Innovation">
+    <meta property="og:description" content="Découvrez nos articles sur l'IA, le bien-être au travail et les innovations technologiques.">
+    <meta property="og:image" content="https://bienmind.com/images/og-blog.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                        dark: '#1e1b4b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="flex items-center">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Bienmind
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="../index.html#features" class="text-gray-700 hover:text-primary transition-colors">Fonctionnalités</a>
+                    <a href="../index.html#about" class="text-gray-700 hover:text-primary transition-colors">À propos</a>
+                    <a href="index.html" class="text-primary font-semibold">Blog</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="../index.html#demo" class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-medium hover:shadow-lg transition-all">
+                        Demander une démo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Blog -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+                    Blog <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Bienmind</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Actualités IA, guides pratiques et innovations pour transformer votre quotidien professionnel
+                </p>
+            </div>
+
+            <!-- Categories -->
+            <div class="flex flex-wrap justify-center gap-3 mt-10">
+                <a href="#" class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">Tous</a>
+                <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all">Intelligence Artificielle</a>
+                <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all">Bien-être</a>
+                <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all">Productivité</a>
+                <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all">Guides Pratiques</a>
+                <a href="#" class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all">Entreprise</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-dark mb-8">Article à la une</h2>
+            <a href="articles/aaas-agent-as-a-service-revolution-ia.html" class="block group">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="bg-gradient-to-br from-primary via-secondary to-accent p-12 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-24 h-24 mx-auto mb-4 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="text-lg font-medium opacity-90">Intelligence Artificielle</span>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">Nouveau</span>
+                                <span class="text-gray-500 text-sm">15 Mai 2025</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">
+                                AaaS : Agent as a Service, la révolution de l'IA au service de tous
+                            </h3>
+                            <p class="text-gray-600 mb-6">
+                                Découvrez comment les agents IA transforment le monde du travail et comment vous pouvez créer votre propre plateforme verticale, que vous soyez entrepreneur, hobbyiste ou grande entreprise.
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                        BM
+                                    </div>
+                                    <span class="text-gray-700 font-medium">Équipe Bienmind</span>
+                                </div>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-500">12 min de lecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-dark mb-8">Derniers articles</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <a href="articles/aaas-agent-as-a-service-revolution-ia.html" class="group">
+                    <article class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">IA</span>
+                                <span class="text-gray-400 text-sm">15 Mai 2025</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors">
+                                AaaS : Agent as a Service, la révolution de l'IA
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                                Comment les agents IA transforment le monde du travail et comment créer votre propre plateforme.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-500 text-sm">12 min</span>
+                                <span class="text-primary font-medium text-sm group-hover:underline">Lire →</span>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Placeholder articles -->
+                <div class="bg-gray-100 rounded-2xl p-6 flex items-center justify-center min-h-[350px]">
+                    <div class="text-center text-gray-400">
+                        <svg class="w-12 h-12 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        <p class="font-medium">Prochain article</p>
+                        <p class="text-sm">17 Mai 2025</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 rounded-2xl p-6 flex items-center justify-center min-h-[350px]">
+                    <div class="text-center text-gray-400">
+                        <svg class="w-12 h-12 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        <p class="font-medium">Prochain article</p>
+                        <p class="text-sm">19 Mai 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">
+                Restez informé des dernières tendances IA
+            </h2>
+            <p class="text-white/80 mb-8">
+                Recevez nos articles, guides pratiques et actualités directement dans votre boîte mail.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                <input type="email" placeholder="votre@email.com" class="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-white/30">
+                <button type="submit" class="px-8 py-4 bg-white text-primary font-semibold rounded-full hover:shadow-xl transition-all">
+                    S'abonner
+                </button>
+            </form>
+            <p class="text-white/60 text-sm mt-4">
+                Pas de spam. Désabonnement en un clic.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Bienmind
+                </div>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="../index.html" class="hover:text-white transition-colors">Accueil</a>
+                    <a href="../index.html#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="index.html" class="hover:text-white transition-colors">Blog</a>
+                    <a href="../index.html#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; 2025 Bienmind. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

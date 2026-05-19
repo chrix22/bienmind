@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7ff"/>
+      <stop offset="50%" style="stop-color:#ede9fe"/>
+      <stop offset="100%" style="stop-color:#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1000" cy="100" r="200" fill="#6366f1" opacity="0.1"/>
+  <circle cx="200" cy="500" r="150" fill="#8b5cf6" opacity="0.1"/>
+  <circle cx="900" cy="450" r="100" fill="#06b6d4" opacity="0.1"/>
+
+  <!-- Logo icon -->
+  <circle cx="600" cy="200" r="60" fill="url(#grad)"/>
+  <path d="M600 160c-12 0-22 9-22 20 0 7.5 4 14 10 17.5v5c0 1.5 1 2.5 2.5 2.5h19c1.5 0 2.5-1 2.5-2.5v-5c6-3.5 10-10 10-17.5 0-11-10-20-22-20z" fill="white"/>
+  <circle cx="600" cy="220" r="4" fill="white"/>
+  <path d="M585 230c0 8.5 6.5 15 15 15s15-6.5 15-15" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="600" y="320" font-family="Inter, sans-serif" font-size="72" font-weight="700" fill="#1e1b4b" text-anchor="middle">Bienmind</text>
+  <text x="600" y="380" font-family="Inter, sans-serif" font-size="28" fill="#6b7280" text-anchor="middle">Solutions SaaS pour le Bien-etre au Travail</text>
+
+  <!-- Stats -->
+  <g transform="translate(250, 450)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="#6366f1">500+</text>
+    <text x="0" y="30" font-family="Inter, sans-serif" font-size="16" fill="#6b7280">Entreprises</text>
+  </g>
+  <g transform="translate(500, 450)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="#6366f1">50k+</text>
+    <text x="0" y="30" font-family="Inter, sans-serif" font-size="16" fill="#6b7280">Utilisateurs</text>
+  </g>
+  <g transform="translate(750, 450)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="#6366f1">98%</text>
+    <text x="0" y="30" font-family="Inter, sans-serif" font-size="16" fill="#6b7280">Satisfaction</text>
+  </g>
+
+  <!-- URL -->
+  <text x="600" y="580" font-family="Inter, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">bienmind.com</text>
+</svg>

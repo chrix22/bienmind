@@ -10,11 +10,21 @@ transformative technology with confidence.
 
 ```
 bienmind/
-├── index.html        # Single-page corporate site
-├── styles/
-│   └── main.css      # All styles (design tokens, layout, components)
+├── index.html              # Single-page corporate site
+├── favicon.svg             # Site favicon
+├── robots.txt              # SEO crawlers directives
+├── sitemap.xml             # Sitemap for search engines
+├── css/
+│   └── styles.css          # Custom styles and animations
 ├── js/
-│   └── main.js       # Mobile nav, scroll behaviour, form feedback
+│   └── main.js             # Mobile nav, scroll behaviour, form feedback
+├── images/
+│   └── og-image.svg        # Social sharing image
+├── blog/
+│   ├── index.html          # Blog listing page
+│   ├── calendrier-editorial.md  # 30-day editorial calendar
+│   └── articles/
+│       └── aaas-agent-as-a-service-revolution-ia.html
 └── README.md
 ```
 
@@ -26,6 +36,25 @@ bienmind/
 - Climate & Sustainability
 - Social Impact & Equity
 - Purpose-Driven Business (B-Corps, nonprofits, co-ops)
+
+## Technologies
+
+- HTML5
+- CSS3 with Tailwind CSS (CDN)
+- Vanilla JavaScript
+- Google Fonts (Inter)
+
+## Features
+
+- Responsive modern design
+- Smooth scroll animations
+- Fixed navigation with transparency effect
+- Contact form with validation
+- Hero section with animated SVG illustration
+- 6 SaaS services presentation
+- Customer testimonials
+- Blog with editorial calendar
+- Full SEO optimization (Open Graph, Twitter Card, Schema.org)
 
 ## Running Locally
 
