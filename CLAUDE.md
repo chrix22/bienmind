@@ -1,24 +1,33 @@
 # Bienmind - Configuration Serveur
 
-## Environnement VPS
+## VPS Production (Hostinger)
 
-- **OS**: Ubuntu 24.04 LTS
+- **Hostname**: srv1088249
 - **User**: root
 - **Chemin site**: `/home/user/bienmind`
-- **Docker**: Installé (v29.3.1)
-- **Docker Compose**: v5.1.1
+- **URL**: https://bienmind.com
 
-## Déploiement
+## Déploiement sur le VPS
 
 ```bash
+ssh root@srv1088249
 cd /home/user/bienmind
 git pull origin main
 docker compose down && docker compose up -d --build
 ```
 
-## Conteneur
+## Setup initial (si nouveau serveur)
 
-- **Nom**: `bienmind-web`
+```bash
+mkdir -p /home/user && cd /home/user
+git clone https://github.com/chrix22/bienmind.git
+cd bienmind
+docker compose up -d --build
+```
+
+## Docker
+
+- **Container**: `bienmind-web`
 - **Image**: `ghcr.io/nginxinc/nginx-unprivileged:alpine`
 - **Port**: `80:8080`
 
@@ -57,3 +66,9 @@ docker ps
 
 - **Production**: https://bienmind.com
 - **Blog**: https://bienmind.com/blog/
+
+## Git
+
+- **Repo**: https://github.com/chrix22/bienmind
+- **Branche prod**: main
+- **Branche dev**: claude/create-bienmind-website-vMMMD
