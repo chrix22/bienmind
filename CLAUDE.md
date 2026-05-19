@@ -9,6 +9,8 @@
 | Paramètre | Valeur |
 |-----------|--------|
 | Hostname | `srv1088249` |
+| IP | `72.61.167.223` |
+| SSH | `ssh root@72.61.167.223` |
 | User | `root` |
 | OS | Ubuntu |
 | Chemin site | `/home/user/bienmind` |
