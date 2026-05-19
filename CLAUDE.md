@@ -7,29 +7,65 @@
 - **Chemin site**: `/home/user/bienmind`
 - **URL**: https://bienmind.com
 
-## Déploiement sur le VPS
+## Architecture
+
+```
+Internet → Traefik (port 80/443) → bienmind-web (port 8080)
+```
+
+## Reverse Proxy - Traefik
+
+- **Container**: `traefik`
+- **Ports**: 80 (HTTP), 443 (HTTPS)
+- **Network**: `traefik_default`
+- **Certificats**: Let's Encrypt (certresolver: letsencrypt)
+
+⚠️ **IMPORTANT**: Ne jamais mapper le port 80 directement. Toujours passer par Traefik.
+
+## Déploiement
 
 ```bash
 ssh root@srv1088249
 cd /home/user/bienmind
 git pull origin main
-docker compose down && docker compose up -d --build
-```
-
-## Setup initial (si nouveau serveur)
-
-```bash
-mkdir -p /home/user && cd /home/user
-git clone https://github.com/chrix22/bienmind.git
-cd bienmind
+docker rm -f bienmind-web
 docker compose up -d --build
 ```
 
-## Docker
+## Docker Compose (avec Traefik)
 
-- **Container**: `bienmind-web`
-- **Image**: `ghcr.io/nginxinc/nginx-unprivileged:alpine`
-- **Port**: `80:8080`
+```yaml
+services:
+  web:
+    build: .
+    container_name: bienmind-web
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.bienmind.rule=Host(`bienmind.com`) || Host(`www.bienmind.com`)"
+      - "traefik.http.routers.bienmind.entrypoints=websecure"
+      - "traefik.http.routers.bienmind.tls.certresolver=letsencrypt"
+      - "traefik.http.services.bienmind.loadbalancer.server.port=8080"
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+    external: true
+```
+
+## Autres services sur ce VPS
+
+| Container | Usage |
+|-----------|-------|
+| traefik | Reverse proxy (ports 80/443) |
+| n8n | Automation (port 5678) |
+| ghost_sonocrea | Blog Ghost |
+| openclaw | OpenClaw |
+| api-claude-cockpit | API Claude |
+| crowdsec | Sécurité |
+| mysql | Base de données |
+| suno-api | Suno API |
 
 ## Commandes utiles
 
@@ -38,13 +74,16 @@ docker compose up -d --build
 docker logs bienmind-web -f
 
 # Redémarrer
-docker compose restart
+docker restart bienmind-web
 
 # Reconstruire
-docker compose up -d --build
+docker rm -f bienmind-web && docker compose up -d --build
 
-# Status
+# Status tous les containers
 docker ps
+
+# Vérifier Traefik
+docker logs traefik -f
 ```
 
 ## Structure du site
@@ -71,4 +110,3 @@ docker ps
 
 - **Repo**: https://github.com/chrix22/bienmind
 - **Branche prod**: main
-- **Branche dev**: claude/create-bienmind-website-vMMMD
